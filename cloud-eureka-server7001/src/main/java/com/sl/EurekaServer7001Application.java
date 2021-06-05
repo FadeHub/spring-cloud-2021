@@ -1,23 +1,20 @@
 package com.sl;
 
-import org.mybatis.spring.annotation.MapperScan;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
-import org.springframework.cloud.netflix.eureka.EnableEurekaClient;
+import org.springframework.cloud.netflix.eureka.server.EnableEurekaServer;
 
 /**
  * @author shuliangzhao
- * @Title: PaymentMain
+ * @Title: EurekaServer7001Application
  * @ProjectName spring-cloud-2021
  * @Description: TODO
- * @date 2021/6/4 22:12
+ * @date 2021/6/5 14:33
  */
 @SpringBootApplication
-@MapperScan("com.sl.mapper")
-@EnableEurekaClient
-public class PaymentMain {
-
+@EnableEurekaServer
+public class EurekaServer7001Application {
     public static void main(String[] args) {
-        SpringApplication.run(PaymentMain.class,args);
+        SpringApplication.run(EurekaServer7001Application.class,args);
     }
 }
