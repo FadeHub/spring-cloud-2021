@@ -21,7 +21,10 @@ public class OrderController {
     @Autowired
     private RestTemplate restTemplate;
 
-    private String url = "http://localhost:8001";
+
+    //private String url = "http://localhost:8001";
+    //集群
+    private String url = "http://CLOUD-PAYMENT-SERVICE/";
 
     @GetMapping(value = "/consumer/payment/create")
     public CommonResult<Payment> create(Payment payment) {

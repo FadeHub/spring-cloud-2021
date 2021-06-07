@@ -22,6 +22,7 @@ public class PaymentController {
     @Autowired
     private PaymentService paymentService;
 
+
     @Value("${server.port}")
     private String serverPort;
 
@@ -41,7 +42,7 @@ public class PaymentController {
     public CommonResult<Payment> getPaymentById(@PathVariable("id") Long id) {
         Payment result = paymentService.getPaymentById(id);
         if (result != null) {
-            log.info("=====查询成功：{},{}====",result,serverPort);
+            log.info("=====查询成功：{}，{}====",result,serverPort);
             return new CommonResult(200,"success",result);
         }  else {
             log.info("======查询失败：{}=====",serverPort);

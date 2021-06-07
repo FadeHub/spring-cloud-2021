@@ -1,5 +1,6 @@
 package com.sl.config;
 
+import org.springframework.cloud.client.loadbalancer.LoadBalanced;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.web.client.RestTemplate;
@@ -12,9 +13,10 @@ import org.springframework.web.client.RestTemplate;
  * @date 2021/6/5 9:59
  */
 @Configuration
-public class ApplicationConfigurtion {
+public class RestConfigurtion {
 
     @Bean
+    @LoadBalanced
     public RestTemplate restTemplate() {
         return new RestTemplate();
     }
